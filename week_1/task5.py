@@ -1,7 +1,8 @@
 """
 leetcode.com/problem-list/string/
 url: https://leetcode.com/problems/string-to-integer-atoi/description/?envType=problem-list-v2&envId=string
-"""
+"""  # noqa: E501
+
 
 class Solution:
     def myAtoi(self, s: str) -> int:
@@ -12,7 +13,7 @@ class Solution:
                 break
             if symbol == " ":
                 continue
-            if symbol in '+-':
+            if symbol in "+-":
                 if len(result) > 0:
                     break
                 result += symbol
@@ -22,8 +23,7 @@ class Solution:
             if symbol.isdigit():
                 result += symbol
                 continue
-            
-        
+
         if result == "" or result == "+" or result == "-":
             return 0
         result = int(result)

@@ -1,7 +1,7 @@
 """
 leetcode.com/problem-list/string/
 url: https://leetcode.com/problems/longest-substring-without-repeating-characters/description/?envType=problem-list-v2&envId=string
-"""
+"""  # noqa: E501
 
 
 class Solution:
@@ -10,12 +10,12 @@ class Solution:
             return len(s)
 
         isSymbolVisited = dict()
-        rightPtr = 0 
+        rightPtr = 0
         leftPtr = 0
         maxSubstringLength = -1
 
         while rightPtr < len(s):
-            while isSymbolVisited.get(s[rightPtr]) == True:
+            while isSymbolVisited.get(s[rightPtr]):
                 isSymbolVisited[s[leftPtr]] = False
                 leftPtr += 1
             maxSubstringLength = max(maxSubstringLength, rightPtr - leftPtr + 1)
@@ -23,4 +23,3 @@ class Solution:
             rightPtr += 1
 
         return maxSubstringLength
-            

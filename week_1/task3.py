@@ -1,7 +1,7 @@
 """
 leetcode.com/problem-list/string/
 url: https://leetcode.com/problems/integer-to-roman/?envType=problem-list-v2&envId=string
-"""
+"""  # noqa: E501
 
 
 class Solution:
@@ -21,7 +21,7 @@ class Solution:
             romanInterpretationOfNum += "D" * (digitsOfNum[1] // 5)
             digitsOfNum[1] %= 5
             romanInterpretationOfNum += "C" * digitsOfNum[1]
-        
+
         if digitsOfNum[2] == 9:
             romanInterpretationOfNum += "XC"
         elif digitsOfNum[2] == 4:
@@ -30,7 +30,7 @@ class Solution:
             romanInterpretationOfNum += "L" * (digitsOfNum[2] // 5)
             digitsOfNum[2] %= 5
             romanInterpretationOfNum += "X" * digitsOfNum[2]
-        
+
         if digitsOfNum[3] == 9:
             romanInterpretationOfNum += "IX"
         elif digitsOfNum[3] == 4:
@@ -39,5 +39,5 @@ class Solution:
             romanInterpretationOfNum += "V" * (digitsOfNum[3] // 5)
             digitsOfNum[3] %= 5
             romanInterpretationOfNum += "I" * digitsOfNum[3]
-        
+
         return romanInterpretationOfNum
