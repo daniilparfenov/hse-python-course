@@ -1,6 +1,6 @@
 """
 leetcode.com/problem-list/string/
-url: https://leetcode.com/problems/letter-combinations-of-a-phone-number/?envType=problem-list-v2&envId=string
+url: https://leetcode.com/problems/letter-combinations-of-a-phone-number/description/
 """  # noqa: E501
 
 

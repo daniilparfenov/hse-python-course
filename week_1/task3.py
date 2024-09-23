@@ -1,6 +1,6 @@
 """
 leetcode.com/problem-list/string/
-url: https://leetcode.com/problems/integer-to-roman/?envType=problem-list-v2&envId=string
+url: https://leetcode.com/problems/integer-to-roman/description/
 """  # noqa: E501
 
 

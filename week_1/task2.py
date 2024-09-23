@@ -1,6 +1,6 @@
 """
 leetcode.com/problem-list/string/
-url: https://leetcode.com/problems/simplify-path/?envType=problem-list-v2&envId=string
+url: https://leetcode.com/problems/simplify-path/description/
 """  # noqa: E501
 
 
