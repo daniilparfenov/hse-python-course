@@ -38,7 +38,3 @@ class Solution:
                 if symbol != " ":
                     res += symbol
         return res
-
-
-sol = Solution()
-sol.convert("PAYPALISHIRING", 3)
