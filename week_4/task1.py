@@ -7,20 +7,20 @@ url: https://leetcode.com/problems/find-first-and-last-position-of-element-in-so
 class Solution:
     def binSearch(self, nums, target, isLeftSearch):
         idx = -1
-        l = m = 0
-        r = len(nums) - 1
-        while l <= r:
-            m = (l + r) // 2
-            if nums[m] > target:
-                r = m - 1
-            elif nums[m] < target:
-                l = m + 1
+        left = mid = 0
+        right = len(nums) - 1
+        while left <= right:
+            mid = (left + right) // 2
+            if nums[mid] > target:
+                right = mid - 1
+            elif nums[mid] < target:
+                left = mid + 1
             else:
-                idx = m
+                idx = mid
                 if isLeftSearch:
-                    r = m - 1
+                    right = mid - 1
                 else:
-                    l = m + 1
+                    left = mid + 1
         return idx
 
     def searchRange(self, nums: list[int], target: int) -> list[int]:
