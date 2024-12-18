@@ -1,6 +1,6 @@
 """
 https://leetcode.com/problem-list/binary-tree/
-url: https://leetcode.com/problems/fruit-into-baskets
+url: https://leetcode.com/problems/flatten-binary-tree-to-linked-list
 """  # noqa: E501
 
 from typing import Optional
