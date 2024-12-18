@@ -1,7 +1,9 @@
 """
 https://leetcode.com/problem-list/binary-tree/
-url: https://leetcode.com/problems/recover-binary-search-tree
+url: https://leetcode.com/problems/sum-root-to-leaf-numbers
 """  # noqa: E501
+
+from typing import Optional
 
 
 # Definition for a binary tree node.
@@ -13,8 +15,13 @@ class TreeNode:
 
 
 class Solution:
-    def dfs(self):
-        pass
+    def dfs(self, node, s):
+        if not node:
+            return 0
+        s = s * 10 + node.val
+        if not (node.left or node.right):
+            return s
+        return self.dfs(node.left, s) + self.dfs(node.right, s)
 
     def sumNumbers(self, root: Optional[TreeNode]) -> int:
-        pass
+        return self.dfs(root, 0)
