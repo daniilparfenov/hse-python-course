@@ -1,6 +1,6 @@
 """
 https://leetcode.com/problem-list/binary-tree/
-url: https://leetcode.com/problems/sum-root-to-leaf-numbers
+url: https://leetcode.com/problems/kth-smallest-element-in-a-bst
 """  # noqa: E501
 
 from typing import Optional
