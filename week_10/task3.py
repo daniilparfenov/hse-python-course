@@ -1,6 +1,6 @@
 """
 https://leetcode.com/problem-list/binary-tree/
-url: https://leetcode.com/problems/sum-root-to-leaf-numbers
+url: https://leetcode.com/problems/path-sum-ii
 """  # noqa: E501
 
 from typing import List, Optional
@@ -15,13 +15,20 @@ class TreeNode:
 
 
 class Solution:
-    def dfs(self, node, s):
+    def dfs(self, node, s, path, res):
         if not node:
             return 0
-        s = s * 10 + node.val
-        if not (node.left or node.right):
-            return s
-        return self.dfs(node.left, s) + self.dfs(node.right, s)
+        s -= node.val
+        path.append(node.val)
+        if node.left is None and node.right is None:
+            if s == 0:
+                res.append(path.copy())
+        else:
+            self.dfs(node.left, s, path, res)
+            self.dfs(node.right, s, path, res)
+        path.pop()
 
     def pathSum(self, root: Optional[TreeNode], targetSum: int) -> List[List[int]]:
-        pass
+        res = []
+        self.dfs(root, targetSum, [], res)
+        return res
